@@ -1,0 +1,293 @@
+GridLayoutExample:
+
+<GridLayoutExample>:
+    cols: 2
+    rows: 2
+    padding: "10dp", "10dp"
+    BoxLayout:
+        BoxLayout:
+            size_hint:1.5, 1
+            orientation: "vertical"
+            Label:
+                text: ""
+                size_hint: 1, 0.01
+            Label:
+                text: root.title1
+                font_name: "fonts/monoton-regular.ttf"
+                size_hint: 1, 1
+                pos_hint: {"x": 0, "y": 0}
+                color: "darkred"
+                font_size: "80dp"
+            Label:
+                text: root.title2
+                font_name: "fonts/monoton-regular.ttf"
+                size_hint: 1, 1
+                pos_hint: {"x": 0, "y": 0}
+                color: "darkred"
+                font_size: "90dp"
+            BoxLayout:
+                orientation: "vertical"
+                Label:
+                    text: "Join the numbers and"
+                    font_name: "fonts/monaco.ttf"
+                    font_size: "18dp"
+                    color: "darksalmon"
+                Label:
+                    text: "get to the 2048 tile!"
+                    font_name: "fonts/monaco.ttf"
+                    font_size: "18dp"
+                    color: "darksalmon"
+        BoxLayout:
+            orientation: "vertical"
+            Label:
+                text: ""
+                size_hint: 1, 1.5
+            WidgetsExample:
+                size_hint: 1, 1.49
+                rows: 3
+                cols: 3
+                Label:
+                    text: ""
+                Button:
+                    text: "U"
+                    size_hint: 3, 3
+                    background_color: 220/255,20/255,60/255,1
+                    on_press: root.on_u_click()
+                    disabled: root.game_over_or_not_start_game
+                Label:
+                    text: ""
+                Button:
+                    text: "L"
+                    size_hint: 3, 3
+                    background_color: 240/255,128/255,128/255,1
+                    on_press: root.on_l_click()
+                    disabled: root.game_over_or_not_start_game
+                Label:
+                    text: ""
+                Button
+                    text: "R"
+                    size_hint: 3, 3
+                    background_color: 240/255,128/255,128/255,1
+                    on_press: root.on_r_click()
+                    disabled: root.game_over_or_not_start_game
+                Label:
+                    text: ""
+                Button:
+                    text: "D"
+                    size_hint: 3, 3
+                    background_color: 220/255,20/255,60/255,1
+                    on_press: root.on_d_click()
+                    disabled: root.game_over_or_not_start_game
+                Label:
+                    text: ""
+            Label:
+                text: ""
+                size_hint: 1, 0.01
+
+    BoxLayout:
+        orientation: "vertical"
+        BoxLayout:
+            padding: "10dp"
+            spacing: "10dp"
+            BoxLayout:
+                orientation: "vertical"
+                Label:
+                    text: "SCORE"
+                    font_name: "fonts/Jersey M54.ttf"
+                    pos_hint: {"right": 1, "center_y": 0.5}
+                    font_size: "40dp"
+                    color: "purple"
+                Button:
+                    text: root.text_score
+                    font_name: "fonts/Jersey M54.ttf"
+                    pos_hint: {"right": 1, "center_y": 0.5}
+                    font_size: "30dp"
+                    background_normal: ""
+                    color: "black"
+            BoxLayout:
+                orientation: "vertical"
+                Label:
+                    text: "HIGH SCORE"
+                    font_name: "fonts/Jersey M54.ttf"
+                    pos_hint: {"x": 0, "center_y": 0.5}
+                    font_size: "40dp"
+                    color: "purple"
+                Button:
+                    text: root.text_high_score
+                    font_name: "fonts/Jersey M54.ttf"
+                    pos_hint: {"x": 0, "center_y": 0.5}
+                    font_size: "30dp"
+                    background_normal: ""
+                    color: "black"
+        Button:
+            text: root.text_a
+            font_name: "fonts/Helvetica-Bold.ttf"
+            font_size: "30dp"
+            color: "firebrick"
+            size_hint: 0.8, 0.8
+            pos_hint: {"center_x": 0.5,"center_y": 0.5}
+            background_color: "darksalmon"
+            on_press: root.new_game()
+
+    GridLayout:
+        spacing: "10dp"
+        padding: "10dp", "10dp"
+        rows: 4
+        Button:
+            text: root.my_text[0]
+            font_name: "fonts/digital-7.ttf"
+            font_size: "40dp"
+            color: 0,0,0,1
+            background_color: root.background_color_numbers[0]
+            background_normal: ""
+            disabled: root.game_over
+        Button:
+            text: root.my_text[1]
+            font_name: "fonts/digital-7.ttf"
+            font_size: "40dp"
+            color: 0,0,0,1
+            background_color: root.background_color_numbers[1]
+            background_normal: ""
+            disabled: root.game_over
+        Button:
+            text: root.my_text[2]
+            font_name: "fonts/digital-7.ttf"
+            font_size: "40dp"
+            color: 0,0,0,1
+            background_color: root.background_color_numbers[2]
+            background_normal: ""
+            disabled: root.game_over
+        Button:
+            text: root.my_text[3]
+            font_name: "fonts/digital-7.ttf"
+            font_size: "40dp"
+            color: 0,0,0,1
+            background_color: root.background_color_numbers[3]
+            background_normal: ""
+            disabled: root.game_over
+        Button:
+            text: root.my_text[4]
+            font_name: "fonts/digital-7.ttf"
+            font_size: "40dp"
+            color: 0,0,0,1
+            background_color: root.background_color_numbers[4]
+            background_normal: ""
+            disabled: root.game_over
+        Button:
+            text: root.my_text[5]
+            font_name: "fonts/digital-7.ttf"
+            font_size: "40dp"
+            color: 0,0,0,1
+            background_color: root.background_color_numbers[5]
+            background_normal: ""
+            disabled: root.game_over
+        Button:
+            text: root.my_text[6]
+            font_name: "fonts/digital-7.ttf"
+            font_size: "40dp"
+            color: 0,0,0,1
+            background_color: root.background_color_numbers[6]
+            background_normal: ""
+            disabled: root.game_over
+        Button:
+            text: root.my_text[7]
+            font_name: "fonts/digital-7.ttf"
+            font_size: "40dp"
+            color: 0,0,0,1
+            background_color: root.background_color_numbers[7]
+            background_normal: ""
+            disabled: root.game_over
+        Button:
+            text: root.my_text[8]
+            font_name: "fonts/digital-7.ttf"
+            font_size: "40dp"
+            color: 0,0,0,1
+            background_color: root.background_color_numbers[8]
+            background_normal: ""
+            disabled: root.game_over
+        Button:
+            text: root.my_text[9]
+            font_name: "fonts/digital-7.ttf"
+            font_size: "40dp"
+            color: 0,0,0,1
+            background_color: root.background_color_numbers[9]
+            background_normal: ""
+            disabled: root.game_over
+        Button:
+            text: root.my_text[10]
+            font_name: "fonts/digital-7.ttf"
+            font_size: "40dp"
+            color: 0,0,0,1
+            background_color: root.background_color_numbers[10]
+            background_normal: ""
+            disabled: root.game_over
+        Button:
+            text: root.my_text[11]
+            font_name: "fonts/digital-7.ttf"
+            font_size: "40dp"
+            color: 0,0,0,1
+            background_color: root.background_color_numbers[11]
+            background_normal: ""
+            disabled: root.game_over
+        Button:
+            text: root.my_text[12]
+            font_name: "fonts/digital-7.ttf"
+            font_size: "40dp"
+            color: 0,0,0,1
+            background_color: root.background_color_numbers[12]
+            background_normal: ""
+            disabled: root.game_over
+        Button:
+            text: root.my_text[13]
+            font_name: "fonts/digital-7.ttf"
+            font_size: "40dp"
+            color: 0,0,0,1
+            background_color: root.background_color_numbers[13]
+            background_normal: ""
+            disabled: root.game_over
+        Button:
+            text: root.my_text[14]
+            font_name: "fonts/digital-7.ttf"
+            font_size: "40dp"
+            color: 0,0,0,1
+            background_color: root.background_color_numbers[14]
+            background_normal: ""
+            disabled: root.game_over
+        Button:
+            text: root.my_text[15]
+            font_name: "fonts/digital-7.ttf"
+            font_size: "40dp"
+            color: 0,0,0,1
+            background_color: root.background_color_numbers[15]
+            background_normal: ""
+            disabled: root.game_over
+
+    BoxLayout:
+        Slider:
+            min: 0
+            max: 100
+            value: 10
+            on_value: root.on_slider_value(self)
+        BoxLayout:
+            orientation: "vertical"
+            Label:
+                text: ""
+            Label:
+                text: "DIFFICULTY"
+                font_name: "fonts/lucidabrightdemibold.ttf"
+                color: "brown"
+                font_size: "30dp"
+            Label:
+                text: "LEVEL"
+                font_name: "fonts/lucidabrightdemibold.ttf"
+                color: "brown"
+                font_size: "30dp"
+            Label:
+                text: ""
+            Label:
+                text: root.slider_value_text
+                font_name: "fonts/digital-7.ttf"
+                color: "violet"
+                font_size: "70dp"
+            Label:
+                text: ""
